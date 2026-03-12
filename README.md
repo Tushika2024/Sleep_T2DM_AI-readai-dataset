@@ -7,6 +7,7 @@ Using the AI-READI Dataset(v3.0.0), sleep stage data was processed and transform
 The goal is not clinical prediction, but to investigate whether sleep characteristics contain useful signals related to metabolic health.
 
 Dataset
+
 The dataset used in this study comes from the AI-READI Dataset(v3.0.0).
 
 Initial Dataset
