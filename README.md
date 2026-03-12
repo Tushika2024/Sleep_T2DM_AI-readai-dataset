@@ -210,7 +210,7 @@ Mean ROC-AUC ≈ 0.75
 
 ### Model Performance
 
-![Model Evaluation](image-1.png)
+![Model Evaluation](sleep_res.png)
 
 ---
 
