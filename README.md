@@ -1,4 +1,4 @@
-# Sleep Behavior Analysis using AI-READI Dataset (v3.0.0)
+# Sleep Behavior Analysis on T2DM using AI-READI Dataset (v3.0.0)
 
 ## Project Overview
 
@@ -20,7 +20,7 @@ The dataset initially contained:
 
 * **100 patients**
 
-Each patient had **wearable sleep recordings** consisting of multiple sleep stage segments per night.
+Each patient had wearable sleep recordings consisting of **multiple sleep stage segments per night**.
 
 ### Example structure of the raw dataset
 
@@ -29,7 +29,7 @@ Each patient had **wearable sleep recordings** consisting of multiple sleep stag
 | 1029       | light       | 2023-09-08T04:21 | 2023-09-08T05:06 |
 | 1029       | deep        | 2023-09-08T05:06 | 2023-09-08T05:42 |
 
-Each night contained **multiple sleep segments**, for example:
+Each night contained multiple sleep segments such as:
 
 ```
 Light → Deep → REM → Light → REM
@@ -45,31 +45,28 @@ After filtering:
 
 * **Final dataset size:** 60 patients
 
-### Class distribution
+### Class Distribution
 
 * **Diabetic:** 38
-* **Non-diabetic:** 22
+* **Non-Diabetic:** 22
 
 ---
 
 # Machine Learning Pipeline
 
-The complete pipeline used in this project is shown below:
-
 ```
 Raw Sleep Data
       │
       ▼
-Data Filtering
-(≥ 7 days of records)
+Data Filtering (≥7 days)
       │
       ▼
 Feature Engineering
 (patient-level aggregation)
       │
       ▼
-Statistical Feature Selection
-(Boxplots, Correlation, Mann-Whitney U Test)
+Feature Selection
+(Boxplots + Correlation + Mann–Whitney U Test)
       │
       ▼
 Model Training
@@ -120,7 +117,7 @@ Sleep segments were aggregated into **daily sleep summaries**, including:
 
 Daily sleep data was further aggregated into **patient-level behavioral features**.
 
-### Initially explored features
+### Initially Explored Features
 
 * Mean sleep duration
 * Sleep variability
@@ -133,29 +130,31 @@ Daily sleep data was further aggregated into **patient-level behavioral features
 * Light sleep percentage
 * Awake percentage
 
-### Feature selection process
+### Feature Selection
 
-To identify meaningful features:
+To identify the most informative features:
 
-* **Distribution plots and boxplots** were used to observe differences between classes
-* **Mann–Whitney U statistical tests** were used to evaluate feature significance
-* **Correlation analysis** was performed to remove redundant features
+* Distribution plots and **boxplots** were analyzed
+* **Mann–Whitney U statistical tests** were applied
+* **Correlation analysis** removed redundant features
 * Multiple **feature combinations were tested through model training**
 
-### Final selected features
+---
+
+## Final Selected Features
 
 Three features were finalized:
 
-* **Sleep variability (`std_sleep`)**
-  Captures irregular sleep patterns linked to metabolic dysregulation.
+**Sleep variability (`std_sleep`)**
+Captures irregular sleep patterns linked to metabolic dysregulation.
 
-* **Percentage of long sleep nights (`pct_long`)**
-  Long sleep duration has been associated with increased metabolic risk.
+**Percentage of long sleep nights (`pct_long`)**
+Long sleep duration has been associated with increased metabolic risk.
 
-* **REM sleep proportion (`pct_rem`)**
-  REM sleep plays an important role in metabolic and neurological regulation.
+**REM sleep proportion (`pct_rem`)**
+REM sleep plays an important role in metabolic and neurological regulation.
 
-Different combinations of these features were evaluated to analyze their effect on model performance.
+Different combinations of these features were tested to evaluate their effect on model performance.
 
 ---
 
@@ -168,7 +167,9 @@ Several classifiers were evaluated:
 * Support Vector Machine (SVM)
 * K-Nearest Neighbors (KNN)
 
-Hyperparameter tuning was performed using **GridSearchCV** with **Repeated Stratified K-Fold cross-validation**.
+Hyperparameter tuning was performed using:
+
+**GridSearchCV + Repeated Stratified K-Fold cross-validation**
 
 ---
 
@@ -190,45 +191,89 @@ Mean ROC-AUC ≈ 0.75
 
 ### Test Set Results
 
-**F1 Score**
+| Metric    | Score   |
+| --------- | ------- |
+| Accuracy  | 0.75    |
+| F1 Score  | 0.84    |
+| ROC-AUC   | 0.71875 |
+| Precision | 0.727   |
+| Recall    | 1.00    |
 
-```
-0.84
-```
+---
 
-**Accuracy**
+## Model Output
 
-```
-0.75
-```
+Make sure the image **`sleep_res.png`** is in your repository.
 
-**ROC-AUC**
-
-```
-0.71875
-```
-
-### Model Performance
-
-![Model Evaluation](sleep_res.png)
+![Model Results](sleep_res.png)
 
 ---
 
 # Interpretation
 
-Results suggest that **sleep variability and REM sleep patterns may contain signals related to metabolic health**. However, this analysis remains **exploratory** and is limited by dataset size.
+Results suggest that **sleep variability and REM sleep patterns may contain signals related to metabolic health**.
+
+However, this analysis is **exploratory** and limited by **dataset size**.
+
+---
+
+# How to Run the Project
+
+Follow these steps to reproduce the analysis.
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Tushika2024/Sleep_T2DM_AI-readai-dataset.git
+cd Sleep_T2DM_AI-readai-dataset
+```
+
+---
+
+## 2️⃣ Install Required Libraries
+
+```bash
+pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+```
+
+---
+
+## 3️⃣ Open the Notebook
+
+```bash
+jupyter notebook
+```
+
+Then open:
+
+```
+sleep_calender_date.ipynb
+```
+
+---
+
+## 4️⃣ Run the Analysis
+
+Execute the notebook cells sequentially to perform:
+
+* Data preprocessing
+* Feature engineering
+* Statistical feature selection
+* Machine learning model training
+* Model evaluation
 
 ---
 
 # Future Work
 
-Future work will focus on **multimodal analysis using additional AI-READI modalities**, including:
+Future improvements may include:
 
-* Sleep + glucose monitoring signals
-* Clinical variables
-* Retinal imaging data
+* Combining **sleep + glucose monitoring signals**
+* Adding **clinical variables**
+* Using **retinal imaging data**
+* Developing **multimodal models**
 
-This approach may help build more comprehensive models for **metabolic health research**.
+This may help build more comprehensive models for metabolic health research.
 
 ---
 
@@ -241,8 +286,3 @@ This approach may help build more comprehensive models for **metabolic health re
 * Matplotlib
 * Seaborn
 
----
-
-
-
-💡 If you want, I can also show you **3 small additions that make ML GitHub projects look *much more impressive*** (and most students don't add them).
