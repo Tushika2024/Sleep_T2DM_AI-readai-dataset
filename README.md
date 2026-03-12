@@ -202,9 +202,6 @@ Mean ROC-AUC ≈ 0.75
 ---
 
 ## Model Output
-
-Make sure the image **`sleep_res.png`** is in your repository.
-
 ![Model Results](sleep_res.png)
 
 ---
