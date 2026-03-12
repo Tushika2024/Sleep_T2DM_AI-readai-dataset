@@ -1,6 +1,7 @@
 Sleep Behavior Analysis using AI-READI Dataset (v3.0.0)
 
 Project Overview
+
 This project explores whether sleep behavior patterns derived from wearable device data show distinguishable differences between diabetic and non-diabetic individuals.
 Using the AI-READI Dataset(v3.0.0), sleep stage data was processed and transformed into patient-level behavioral features, which were then used to train machine learning models for exploratory classification analysis.
 The goal is not clinical prediction, but to investigate whether sleep characteristics contain useful signals related to metabolic health.
