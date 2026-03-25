@@ -270,8 +270,9 @@ Execute the notebook cells sequentially to perform:
 ---
 
 ## 5️⃣ Run Streamlit App
+```bash
 streamlit run app.py
-
+```
 ---
 
 # Future Work
