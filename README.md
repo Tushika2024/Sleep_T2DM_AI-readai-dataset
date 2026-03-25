@@ -10,6 +10,14 @@ The goal is **not clinical prediction**, but to investigate whether **sleep char
 
 ---
 
+## 🌐 Live Dashboard
+
+👉 **Streamlit App:**  
+https://sleept2dmai-readai-dataset-vae2nnpwfzrts6jrrsb7xl.streamlit.app/
+
+> ⏳ *Note: App may take a few seconds to load (hosted on Streamlit Cloud)*
+---
+
 # Dataset
 
 The dataset used in this study comes from the **AI-READI Dataset (v3.0.0)**.
@@ -227,10 +235,10 @@ cd Sleep_T2DM_AI-readai-dataset
 
 ---
 
-## 2️⃣ Install Required Libraries
+## 2️⃣ Install dependencies
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+pip install -r requirements.txt
 ```
 
 ---
@@ -261,6 +269,11 @@ Execute the notebook cells sequentially to perform:
 
 ---
 
+## 5️⃣ Run Streamlit App
+streamlit run app.py
+
+---
+
 # Future Work
 
 Future improvements may include:
@@ -282,4 +295,5 @@ This may help build more comprehensive models for metabolic health research.
 * Scikit-learn
 * Matplotlib
 * Seaborn
+* Streamlit
 
