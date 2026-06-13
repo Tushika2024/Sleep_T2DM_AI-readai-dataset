@@ -51,7 +51,7 @@ To ensure stable feature computation, only patients with **at least 7 days of sl
 
 After filtering:
 
-* **Final dataset size:** 60 patients
+* **Final dataset size:** 1492 patients
 
 ### Class Distribution
 
