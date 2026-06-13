@@ -26,7 +26,7 @@ The dataset used in this study comes from the **AI-READI Dataset (v3.0.0)**.
 
 The dataset initially contained:
 
-* **100 patients**
+* **2280 patients**
 
 Each patient had wearable sleep recordings consisting of **multiple sleep stage segments per night**.
 
@@ -55,8 +55,8 @@ After filtering:
 
 ### Class Distribution
 
-* **Diabetic:** 38
-* **Non-Diabetic:** 22
+* **Diabetic:** 969
+* **Non-Diabetic:** 523
 
 ---
 
@@ -66,7 +66,7 @@ After filtering:
 Raw Sleep Data
       │
       ▼
-Data Filtering (≥7 days)
+Data Preprocessing
       │
       ▼
 Feature Engineering
