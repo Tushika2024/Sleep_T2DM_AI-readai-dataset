@@ -3,10 +3,6 @@
 An exploratory study of whether sleep behaviour captured by consumer wearables carries a measurable signal about Type 2 Diabetes status.
 
 **Live dashboard:** https://sleept2dmai-readai-dataset-vae2nnpwfzrts6jrrsb7xl.streamlit.app/
-*(Hosted on Streamlit Cloud — may take a few seconds to wake.)*
-
-> **Scope.** This is hypothesis-generating research, not a diagnostic tool. The headline result (ROC-AUC 0.62) is a weak signal, and the paper's contribution is establishing that the signal exists and quantifying how weak it is — not claiming predictive utility.
-
 ---
 
 ## Research Question
