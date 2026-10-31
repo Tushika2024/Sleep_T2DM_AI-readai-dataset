@@ -2,7 +2,7 @@
 
 An exploratory study of whether sleep behaviour captured by consumer wearables carries a measurable signal about Type 2 Diabetes status.
 
-**Live dashboard:** https://sleept2dmai-readai-dataset-vae2nnpwfzrts6jrrsb7xl.streamlit.app/
+Live dashboard: https://sleept2dmai-readai-dataset-vae2nnpwfzrts6jrrsb7xl.streamlit.app/
 ---
 
 ## Research Question
